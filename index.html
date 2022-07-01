@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/logo.png" type="image/icon type">
+
+    <title>Cryptography</title>
+</head>
+<body>
+
+    <div id="navbar">
+        <div id="nav">
+            <div id="title">
+                <a href="index.html">Cryptography</a>
+            </div>
+            <div id="menu">
+                <div id="nav-caesar">
+                    <a href="#Caesar">Caesar<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <div id="drop-caesar">
+                        <a href="html/Caesar-Encrypt.html" class="nav-enc">Encrypt</a>
+                        <p>-------------------------------------</p>
+                        <a href="html/Caesar-Decrypt.html" class="nav-dec">Decrypt</a>
+                    </div>
+                </div>
+                <div id="nav-mono">
+                    <a href="#Monoalphabetic">Monoalphabetic<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <div id="drop-mono">
+                        <a href="html/Mono-Encrypt.html" class="nav-enc">Encrypt</a>
+                        <p>-------------------------------------</p>
+                        <a href="html/Mono-Decrypt.html" class="nav-dec">Decrypt</a>
+                    </div>
+                </div>
+                <div id="nav-rail">
+                    <a href="#Rail-Fence">Rail-Fence<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                    <div id="drop-rail">
+                        <a href="html/Rail-Encrypt.html" class="nav-enc">Encrypt</a>
+                        <p>-------------------------------------</p>
+                        <a href="html/Rail-Decrypt.html" class="nav-dec">Decrypt</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mainBody">
+        <ul>
+            <li>
+                Cryptography:
+                <div class="main-crypto">
+                    <p>Cryptography is a modern technique to protect digital data. These techniques are derived from a predetermined set of rules which transforms the message of the trusted user. This message cannot be recognized by the unauthorized user.</p>
+                    <h7>Symmetric-key cryptography:</h7>
+                    <p class="main-sub-sym">When a secret key is used for both encryption and decryption operations, the process is known as symmetric key cryptography, also referred to as symmetric encryption. Some of the most common use cases for symmetric cryptography include:</p>
+                    <ul class="main-sub-ul1">
+                        <li>
+                            Banking:
+                            <p>Encrypting credit card information or other personally identifiable information (PII) required for transactions.</p>
+                        </li>
+                        <li>
+                            Data Storage:
+                            <p>Encrypting data stored on a device when that data is not being transferred.</p>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                Encryption & Decryption:
+                <div class="main-enc-dec">
+                    <ul>
+                        <li>
+                            Encryption:
+                            <p>It is a cryptographic technique using which the sender's message is converted into a secret code that cannot be recognized without a security key. Such type of encrypted data is called cipher text.</p>
+                        </li>
+                        <li>
+                            Decryption:
+                            <p>The process of conversion of the cipher text to the plain text is called decryption. To decrypt the encrypted data, the user needs a key. The access of this key is given only to the receiver(the trusted users).</p>
+                        </li>
+                    </ul>
+                    <img src="img/Working.png" id="image-working" height="400px">
+                </div>
+            </li>
+            <li>
+                Caesar Cipher:
+                <div class="main-caesar-cipher">
+                    <p>The Caesar Cipher is one of the earliest and most straightforward encryption methods. It's basically a substitution cipher, in which each letter of a given text is substituted with a letter located a certain number of positions down the alphabet. With a shift of one, for example, A would be replaced by B, B by C, and so on. Julius Caesar is said to have called the approach after himself, as he used it to communicate with his officials.</p>
+                    <p>To cipher a given text, we need an integer value called shift, which tells how far down each letter of the text has been relocated.</p>
+                    <p>The encryption can be represented using modular arithmetic by converting the letters to numbers using the A = 0, B = 1,..., Z = 25 approach.</p>
+                </div>
+            </li>
+            <li>
+                Monoalphabetic:
+                <div class="main-monoalpha-cipher">
+                    <p>A monoalphabetic cypher, often known as a basic substitution cypher, has a predefined substitution scheme. That is, for each letter of the alphabet, the substitution is fixed. If "a" is encrypted to "R," we replace the letter "a" in the plaintext with the letter "R" in the ciphertext every time we encounter it.</p>
+                    <p>"Hello World" becomes "Htssg Wgksr" for example, because each letter is encoded as the next letter in the alphabet. It's easier to construct the ciphertext alphabet first, then encrypt by comparing it to the plaintext alphabet when executing a simple substitution manually.</p>
+                </div>
+            </li>
+            <li>
+                Rail-Fence:
+                <div class="main-rail-fence-cipher">
+                    <p>To use the Rail Fence Cipher to encrypt a message, write your message in zigzag lines across the page, then read off each row. To begin, you'll need a key, which for this cipher is the number of rows you'll have. Then you start writing the plaintext letters diagonally down to the right until you reach the key's chosen number of rows. Then you bounce up diagonally till you reach the first row once more. This continues till the plaintext is finished.</p>
+                    <p>The Rail Fence Cipher decryption technique entails rebuilding the diagonal grid that was used to encrypt the message. We begin writing the message, but leave a dash in the places that have yet to be filled. Replace all the dashes with the corresponding letters and read the plaintext from the table gradually.</p>
+                    <P>To begin, we create a grid with as many rows as the key and as many columns as the ciphertext's length. The initial letter is then placed in the top left square, with dashes diagonally downwards indicating where the characters will be. We return to the top row and insert the next letter into the ciphertext. Continue in this manner across the row, and when you reach the end, begin the next row.</P>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div id="footer">
+        <a href="html/refrences.html">Refrences</a>
+        <a href="html/about.html">About us</a>
+    </div>
+
+</body>
+</html>
+

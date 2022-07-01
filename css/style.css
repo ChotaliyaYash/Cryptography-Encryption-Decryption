@@ -1,0 +1,743 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(232, 229, 229);
+}
+
+/* fixec Place of */
+#navbar{
+    /* overflow: hidden; */
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+
+/* Navigation details*/
+#nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    background-color: rgb(125, 126, 127);
+    font-family: 'Acme', sans-serif;
+}
+#menu{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+#menu a{
+    text-decoration: none;
+    color: rgb(232, 229, 229);
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+#menu a:hover{
+    color: black;
+}
+#menu i{
+    padding-left: 10px;
+}
+#menu p{
+    color: rgb(232, 229, 229);
+    pointer-events: none;
+}
+#title a{
+    text-decoration: none;
+    color: rgb(232, 229, 229);
+    font-size: 40px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+
+/* Droplist Creation */
+#nav-caesar, #nav-mono, #nav-rail{
+    float: left;
+    overflow: hidden;
+}
+#drop-caesar{
+    display: none;
+    position: absolute;
+    background-color: rgb(100, 99, 99);
+    min-width: 160px;
+    box-shadow: 5px 10px rgba(62, 62, 62, 0.537);
+    z-index: 1;
+    margin-left: -40px;
+    border-radius: 5px;
+}
+#drop-mono{
+    display: none;
+    position: absolute;
+    background-color: rgb(100, 99, 99);
+    min-width: 160px;
+    box-shadow: 5px 10px rgba(62, 62, 62, 0.537);
+    z-index: 1;
+    margin-left: 7px;
+    border-radius: 10px;
+}
+#drop-rail{
+    display: none;
+    position: absolute;
+    background-color: rgb(100, 99, 99);
+    min-width: 160px;
+    box-shadow: 5px 10px rgba(62, 62, 62, 0.537);
+    z-index: 1;
+    margin-left: -20px;
+    border-radius: 10px;
+}
+#drop-caesar a,#drop-mono a, #drop-rail a{
+    float: none;
+    color: rgb(232, 229, 229);
+    padding-left: 30%;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+#drop-caesar .nav-enc, #drop-mono .nav-enc, #drop-rail .nav-enc{ 
+    padding-top: 15px;
+    padding-bottom: 7px;
+}
+#drop-caesar .nav-dec, #drop-mono .nav-dec, #drop-rail .nav-dec{ 
+    padding-top: 7px;
+    padding-bottom: 20px;
+}
+#drop-caesar a:hover, #drop-mono a:hover, #drop-rail a:hover{
+    color: black;
+}
+#nav-caesar:hover #drop-caesar, #nav-mono:hover #drop-mono, #nav-rail:hover #drop-rail{
+    display: block;
+}
+
+/* Footer details */
+#footer{
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    height: 15vh;
+    background-color: rgb(125, 126, 127);
+}
+#footer a{
+    font-family: 'Acme', sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(232, 229, 229);
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+
+
+/* Main Page Content */
+#mainBody{
+    margin-top: 120px;
+    font-family: 'Source Serif Pro', serif;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    margin-right: 20px;
+}
+#mainBody ul li{
+    padding: 5px;
+    list-style: none;
+    font-weight: 600;
+}
+
+/* Below is the code for Main page CryptoGraphy title */
+#mainBody ul li .main-crypto p{
+    padding-bottom: 10px;
+}
+#mainBody ul li .main-crypto{
+    margin-top: 10px;
+    margin-left: 50px;
+    font-weight: 300;
+}
+#mainBody ul li .main-crypto h7{
+    margin-top: 10px;
+    /* margin-left: 50px; */
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+#mainBody ul li .main-crypto .main-sub-sym{
+    margin-top: 10px;
+    margin-left: 50px;
+    /* margin-bottom: 10px; */
+}
+#mainBody ul li .main-crypto .main-sub-ul1 li{
+    margin-left: 50px;
+    font-weight: 400;
+    list-style: circle;
+}
+#mainBody ul li .main-crypto .main-sub-ul1 p{
+    margin-left: 50px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+/* Below is the code for Main Page Encoding Dcoding part */
+#mainBody ul li .main-enc-dec{
+    margin-top: 10px;
+    margin-left: 50px;
+    font-weight: 300;
+}
+#mainBody ul li .main-enc-dec ul li{
+    font-weight: 400;
+}
+#mainBody ul li .main-enc-dec ul li p{
+    font-weight: 300;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+#mainBody ul li .main-enc-dec #image-working{
+    margin-top: 25px;
+    margin-left: 350px;
+}
+
+/* Below is the code for Main page Caesar cipher part */
+#mainBody ul li .main-caesar-cipher{
+    margin-left: 50px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+#mainBody ul li .main-caesar-cipher p{
+    padding-top: 15px;
+}
+
+/* Below is the code for Main page Monoalphabetic cipher part */
+#mainBody ul li .main-monoalpha-cipher{
+    margin-left: 50px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+#mainBody ul li .main-monoalpha-cipher p{
+    padding-top: 15px;
+}
+
+/* Below is the code for Main page Monoalphabetic cipher part */
+#mainBody ul li .main-rail-fence-cipher{
+    margin-left: 50px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+#mainBody ul li .main-rail-fence-cipher p{
+    padding-top: 15px;
+}
+
+/*  */
+
+
+
+
+
+.main{
+    height: 1500px;
+    margin: 100px;
+}
+
+/* Scroll Bar adition */
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px gray; 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(149, 145, 145); 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #e20000; 
+}
+
+
+/* Caesar main body content code */
+#main-Caesar{
+    display: flex;
+    flex-direction: column;
+    margin-top: 120px;
+    /* font-family: 'Source Serif Pro', serif; */
+    font-size: 20px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    font-family: 'Source Serif Pro', serif;
+}
+#main-Caesar #Caesar-textbox{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around;
+    align-items: center; */
+    background-color: rgba(162, 158, 158, 0.323);
+    box-shadow: 0 0 5px #3c3c3c;
+    border-radius: 10px;
+}
+#main-Caesar #Caesar-textbox-sub-1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#main-Caesar #Caesar-textbox-sub-1 textarea{
+    font-size: 17px;
+    outline: none !important;
+    border-color: #a1abb6;
+    box-shadow: 0 0 10px #3c3c3c;
+    border-radius: 5px;margin-bottom: 20px;
+    padding: 10px;
+    resize: none;
+}
+#main-Caesar #Caesar-textbox-sub-1 p{
+    margin-top: 20px;
+    margin-left: 40%;
+    padding-bottom: 20px;
+}
+#main-Caesar #Caesar-Heading{
+    margin-bottom: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+#main-Caesar #Caesar-textbox-sub-2,#Caesar-textbox-sub-3{
+    display: flex;
+    font-size: 17px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+}
+#main-Caesar #Caesar-textbox-sub-2 span,#Caesar-textbox-sub-3 span,#Caesar-textbox-sub-4 span{
+    padding-right: 20px;
+}
+#main-Caesar #Caesar-textbox-sub-2 input,#Caesar-textbox-sub-3 input{
+    font-size: 14px;
+}
+#main-Caesar #Caesar-textbox-sub-2 #caesar-file-encrypt{
+    cursor: pointer;
+}
+#main-Caesar #Caesar-textbox-sub-2 #read{
+    font-size: 12px;
+    cursor: pointer;
+    border: 0.5px solid gray;
+    padding-left: 20px;
+    padding-top: 3px;
+    border-radius: 5px;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#main-Caesar #Caesar-textbox-sub-2 #read:hover,#Caesar-textbox-sub-3 #clear:hover{
+    background-color: #b0acac;
+}
+#main-Caesar #Caesar-textbox-sub-3{
+    margin-top: 10px;
+}
+#main-Caesar #Caesar-textbox-sub-4{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+#main-Caesar #Caesar-textbox-sub-4 #caesar-encrypt-submit, #main-Caesar #Caesar-textbox-sub-4 #caesar-decrypt-submit{
+    font-size: 17px;
+    cursor: pointer;
+    border: 0.5px solid rgb(128, 128, 128);
+    padding-left: 20px;
+    padding-top: 2px;
+    border-radius: 5px;
+    background-color: rgb(128, 245, 142);
+}
+#main-Caesar #Caesar-textbox-sub-4 #caesar-encrypt-submit:hover, #main-Caesar #Caesar-textbox-sub-4 #caesar-decrypt-submit:hover{
+    background-color: #054e18;
+    color: white;   
+}
+#main-Caesar #Caesar-textbox-sub-3 #clear{
+    margin-left: 50px;
+    font-size: 12px;
+    cursor: pointer;
+    border: 0.5px solid gray;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 3px;
+    border-radius: 5px;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: black;
+}
+#main-Caesar #Caesar-textbox-sub-4 #download{
+    margin-left: 30px;
+    font-size: 17px;
+    cursor: pointer;
+    border: 0.5px solid rgb(128, 128, 128);
+    padding-left: 20px;
+    padding-top: 2px;
+    border-radius: 5px;
+    background-color: rgb(128, 245, 142);
+}
+#main-Caesar #Caesar-textbox-sub-4 i{
+    padding-right: 10px;
+
+}
+#main-Caesar #Caesar-textbox-sub-4 #download:hover{
+    background-color: #054e18;
+    color: white;   
+}
+
+
+/*  Monoalphatetic Main Details  */
+#main-mono{
+    display: flex;
+    flex-direction: column;
+    margin-top: 120px;
+    /* font-family: 'Source Serif Pro', serif; */
+    font-size: 20px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    font-family: 'Source Serif Pro', serif;
+}
+#main-mono #mono-textbox{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around;
+    align-items: center; */
+    background-color: rgba(162, 158, 158, 0.323);
+    box-shadow: 0 0 5px #3c3c3c;
+    border-radius: 10px;
+}
+#main-mono #mono-textbox-sub-1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#main-mono #mono-textbox-sub-1 textarea{
+    font-size: 17px;
+    outline: none !important;
+    border-color: #a1abb6;
+    box-shadow: 0 0 10px #3c3c3c;
+    border-radius: 5px;margin-bottom: 20px;
+    padding: 10px;
+    resize: none;
+}
+#main-mono #mono-textbox-sub-1 p{
+    margin-top: 20px;
+    margin-left: 40%;
+    padding-bottom: 20px;
+}
+#main-mono #mono-Heading{
+    margin-bottom: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+#main-mono #mono-textbox-sub-2,#mono-textbox-sub-3{
+    display: flex;
+    font-size: 17px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+}
+#main-mono #mono-textbox-sub-2 span,#mono-textbox-sub-3 span,#mono-textbox-sub-4 span{
+    padding-right: 20px;
+}
+#main-mono #mono-textbox-sub-2 input,#mono-textbox-sub-3 input{
+    font-size: 14px;
+}
+#main-mono #mono-textbox-sub-2 #mono-file-encrypt{
+    cursor: pointer;
+}
+#main-mono #mono-textbox-sub-2 #read{
+    font-size: 12px;
+    cursor: pointer;
+    border: 0.5px solid gray;
+    padding-left: 20px;
+    padding-top: 3px;
+    border-radius: 5px;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#main-mono #mono-textbox-sub-2 #read:hover,#mono-textbox-sub-3 #clear:hover{
+    background-color: #b0acac;
+}
+#main-mono #mono-textbox-sub-3{
+    margin-top: 10px;
+
+}
+#main-mono #mono-textbox-sub-3 input{
+    width: 200px;
+}
+#main-mono #mono-textbox-sub-4{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+#main-mono #mono-textbox-sub-4 #mono-encrypt-submit, #main-mono #mono-textbox-sub-4 #mono-decrypt-submit{
+    font-size: 17px;
+    cursor: pointer;
+    border: 0.5px solid rgb(128, 128, 128);
+    padding-left: 20px;
+    padding-top: 2px;
+    border-radius: 5px;
+    background-color: rgb(128, 245, 142);
+}
+#main-mono #mono-textbox-sub-4 #mono-encrypt-submit:hover, #main-mono #mono-textbox-sub-4 #mono-decrypt-submit:hover{
+    background-color: #054e18;
+    color: white;   
+}
+#main-mono #mono-textbox-sub-3 #clear{
+    margin-left: 50px;
+    font-size: 12px;
+    cursor: pointer;
+    border: 0.5px solid gray;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 3px;
+    border-radius: 5px;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: black;
+}
+#main-mono #mono-textbox-sub-4 #download{
+    margin-left: 30px;
+    font-size: 17px;
+    cursor: pointer;
+    border: 0.5px solid rgb(128, 128, 128);
+    padding-left: 20px;
+    padding-top: 2px;
+    border-radius: 5px;
+    background-color: rgb(128, 245, 142);
+}
+#main-mono #mono-textbox-sub-4 i{
+    padding-right: 10px;
+
+}
+#main-mono #mono-textbox-sub-4 #download:hover{
+    background-color: #054e18;
+    color: white;   
+}
+
+
+/* Rail Fence */
+#main-rail{
+    display: flex;
+    flex-direction: column;
+    margin-top: 120px;
+    /* font-family: 'Source Serif Pro', serif; */
+    font-size: 20px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    font-family: 'Source Serif Pro', serif;
+}
+#main-rail #rail-textbox{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around;
+    align-items: center; */
+    background-color: rgba(162, 158, 158, 0.323);
+    box-shadow: 0 0 5px #3c3c3c;
+    border-radius: 10px;
+}
+#main-rail #rail-textbox-sub-1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#main-rail #rail-textbox-sub-1 textarea{
+    font-size: 17px;
+    outline: none !important;
+    border-color: #a1abb6;
+    box-shadow: 0 0 10px #3c3c3c;
+    border-radius: 5px;margin-bottom: 20px;
+    padding: 10px;
+    resize: none;
+}
+#main-rail #rail-textbox-sub-1 p{
+    margin-top: 20px;
+    margin-left: 40%;
+    padding-bottom: 20px;
+}
+#main-rail #rail-Heading{
+    margin-bottom: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+#main-rail #rail-textbox-sub-2,#rail-textbox-sub-3{
+    display: flex;
+    font-size: 17px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+}
+#main-rail #rail-textbox-sub-2 span,#rail-textbox-sub-3 span,#rail-textbox-sub-4 span{
+    padding-right: 20px;
+}
+#main-rail #rail-textbox-sub-2 input,#rail-textbox-sub-3 input{
+    font-size: 14px;
+}
+#main-rail #rail-textbox-sub-2 #rail-file-encrypt{
+    cursor: pointer;
+}
+#main-rail #rail-textbox-sub-2 #read{
+    font-size: 12px;
+    cursor: pointer;
+    border: 0.5px solid gray;
+    padding-left: 20px;
+    padding-top: 3px;
+    border-radius: 5px;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#main-rail #rail-textbox-sub-2 #read:hover,#rail-textbox-sub-3 #clear:hover{
+    background-color: #b0acac;
+}
+#main-rail #rail-textbox-sub-3{
+    margin-top: 10px;
+
+}
+#main-rail #rail-textbox-sub-4{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+#main-rail #rail-textbox-sub-4 #rail-encrypt-submit, #main-rail #rail-textbox-sub-4 #rail-decrypt-submit{
+    font-size: 17px;
+    cursor: pointer;
+    border: 0.5px solid rgb(128, 128, 128);
+    padding-left: 20px;
+    padding-top: 2px;
+    border-radius: 5px;
+    background-color: rgb(128, 245, 142);
+}
+#main-rail #rail-textbox-sub-4 #rail-encrypt-submit:hover, #main-rail #rail-textbox-sub-4 #rail-decrypt-submit:hover{
+    background-color: #054e18;
+    color: white;   
+}
+#main-rail #rail-textbox-sub-3 #clear{
+    margin-left: 50px;
+    font-size: 12px;
+    cursor: pointer;
+    border: 0.5px solid gray;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 3px;
+    border-radius: 5px;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: black;
+}
+#main-rail #rail-textbox-sub-4 #download{
+    margin-left: 30px;
+    font-size: 17px;
+    cursor: pointer;
+    border: 0.5px solid rgb(128, 128, 128);
+    padding-left: 20px;
+    padding-top: 2px;
+    border-radius: 5px;
+    background-color: rgb(128, 245, 142);
+}
+#main-rail #rail-textbox-sub-4 i{
+    padding-right: 10px;
+
+}
+#main-rail #rail-textbox-sub-4 #download:hover{
+    background-color: #054e18;
+    color: white;   
+}
+
+
+
+/* Refrences Page */
+#References-Content{
+    /* display: flex;
+    flex-direction: column; */
+    margin-top: 120px;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: 'Source Serif Pro', serif;
+    margin-bottom: 50px;
+}
+#References-Content #title{
+    font-weight: 600;
+}
+#References-Content #list{
+    font-weight: 300;
+    margin-left: 50px;
+}
+#References-Content #list ul li p{
+    padding-top: 20px;
+}
+#References-Content #list ul li a{
+    margin-left: 50px;
+    color: blue;
+}
+
+
+/* About us info */
+#about-section{
+    /* display: flex;
+    flex-direction: column; */
+    margin-top: 120px;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: 'Source Serif Pro', serif;
+    font-weight: 600;
+    height: 601px;
+}
+#about-section #about-detail{
+    margin-left: 50px;
+    margin-top: 20px;
+    font-weight: 300;
+}
+#about-section #about-detail p{
+    margin-top: 10px;
+}
+#about-section #about-detail p span{
+    margin-top: 10px;
+    font-weight: 400;
+}
+#about-section #about-detail ul{
+    padding-top: 10px;
+}
+#about-section #about-detail li{
+    margin-left: 50px;
+    padding-bottom: 10px;
+}
+
+
+/* Spin Machemish */
+#spin{
+    display: none;
+    background-color: rgba(144, 142, 142, 0.331);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+
+}
+#spinner{
+    animation: spin 1s linear infinite;
+    color:rgb(0, 34, 255);
+}
+  
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.inline{
+    margin: 25%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.spinner i{
+    margin-top: 10px;
+    margin-left: 50px;
+}
