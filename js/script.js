@@ -221,7 +221,7 @@ if(CeasarEncryptButton != null){
                     result = result.concat(String.fromCharCode(charc + key))
                 }
                 answer.textContent = result
-            },5000)
+            },2000)
             
         }
     })
@@ -251,7 +251,7 @@ else if(CeasarDecryptButton != null){
                 }
                 answer.innerText = result
 
-            },5000)  
+            },2000)  
         }
     })
 }
@@ -292,7 +292,7 @@ else if(MonoEncryptButton != null){
     
                 answer.innerText = result
             
-            },5000)
+            },2000)
             // console.log(result)
         }
         else{
@@ -332,7 +332,7 @@ else if(MonoDecryptButton != null){
                 }
                 // console.log(result)
                 answer.innerText = result
-            },5000)
+            },2000)
         }
         else{
             alert('please enter all 26 alphabates containing small or non-repeating alphabates')
@@ -362,7 +362,7 @@ else if(RailEncryptButton != null){
     
                 answer.textContent = result
                 
-            },5000)
+            },2000)
             
         }
     })
@@ -387,7 +387,7 @@ else if(RailDecryptButton != null){
 
                 answer.textContent = result
                 
-            },5000)
+            },2000)
             
         }
     })
